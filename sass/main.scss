@@ -1,0 +1,175 @@
+// compileCompressed, compressedFilenamePattern: ../css/$1.css
+
+@import 'mixins/responsive';
+@import 'themes/abemeister';
+@import 'nav';
+@import url('https://fonts.googleapis.com/css?family=Lato:300|Permanent+Marker');
+
+body {
+    margin: 0px;
+    font-family: 'Lato';
+    font-size: 1.2em;
+
+    .fullWindow {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .marginTop {
+        margin-top: 150px;
+      }
+
+      .lightColor {
+        color: $subtleColor;
+      }
+
+      .button {
+        background: rgba($subtleColor,.6);
+        color: #000;
+        padding: 18px 30px;
+        margin: 0px 10px;
+        display: inline-block;
+        font-size: 80%;
+        text-align: center;
+        text-decoration: none;
+        transition: background .4s, border .4s;
+      }
+
+      @include breakpoint(xs) {
+        .button {
+          display: block;
+          margin: 10px !important;
+        }
+
+        .badge {
+          display: inline-block;
+        }
+      }
+
+      .button-small {
+        font-size: 80%;
+        padding: 6px;
+      }
+
+      .badge {
+        border-radius: 50%;
+        width: 32px;
+        height: 28px;
+        font-size: 100%;
+        text-align: center;
+        padding: 0px;
+        padding-top: 4px;
+      }
+
+      .button-large {
+        font-size: 120%;
+      }
+
+      .button-block {
+        display: block;
+      }
+
+      .button:hover, .button.hollow:hover {
+        background: rgba($subtleColor,.8);
+        color: #000;
+      }
+
+      .button.hollow {
+        background: rgba(0,0,0,.2);
+        border: $subtleColor solid 1px;
+        color: $subtleColor;
+      }
+
+      #video{
+       position: relative;
+       background: transparent;
+      }
+
+      .ytplayer-container{
+       position: absolute;
+       top: 0;
+       z-index: -1;
+      }
+
+    }
+
+    .padded {
+        padding: $columnPadding;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .absolute {
+      position: absolute;
+    }
+
+    .relative {
+      position: relative;
+    }
+
+    .row.alignTop {
+      align-items: flex-start;
+    }
+
+    .row.alignBottom {
+      align-items: flex-end;
+    }
+
+    .row {
+      width: 100%;
+      display: flex;
+      overflow: auto;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .column {
+        padding: $columnPadding;
+        height: 100%;
+      }
+
+      @for $i from 12 through 1 {
+        .column.xsmall-#{$i}, .column.small-#{$i}, .column-medium-#{$i}, .column.large-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
+      }
+
+
+        @include breakpoint(md) {
+            @for $i from 12 through 1 {
+              .large-#{$i} { width: calc(100% - #{$columnPaddingSum}); }
+            }
+          }
+
+
+          @include breakpoint(sm) {
+              @for $i from 12 through 1 {
+                .column-medium-#{$i}, .column.large-#{$i} { width: calc(100% - #{$columnPaddingSum}); }
+              }
+
+            }
+
+            @include breakpoint(xs) {
+
+              @for $i from 12 through 1 {
+                .column.small-#{$i}, .column-medium-#{$i}, .column.large-#{$i} { width: calc(100% - #{$columnPaddingSum}); }
+              }
+
+            }
+
+    }
+
+
+}

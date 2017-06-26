@@ -1,0 +1,23 @@
+header {
+				transition: all 1s ease-in-out;
+}
+
+header img {
+				height: 130px;
+				margin-bottom: -30px;
+}
+
+header h1.title {
+				margin: 0px;
+				font-family: 'Rock Salt', cursive;
+				color: #EF5B5B;
+}
+
+header.stick {
+				background: rgba(255, 255, 255, 0.7);
+				border-bottom: solid #ccc 1px;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+}
