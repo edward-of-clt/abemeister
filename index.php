@@ -12,6 +12,7 @@
 		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		 <script src="https://use.fontawesome.com/7fc0a020a0.js"></script>
      <link href="/wp-content/themes/abemeister/css/main.css" rel="stylesheet">
+     <?php wp_head(); ?>
    </head>
  <body>
 	 <header class="fullWindow">
@@ -24,12 +25,15 @@
 	       </div>
 				 <div class="column text-center xsmall-12">
 <?php
-  $buttons = wp_get_nav_menu_items("homepage-buttons");
-  print_r($buttons);
+
+  $navs = get_nav_menu_locations();
+
+  $buttons = wp_get_nav_menu_items($navs['homepage-buttons']);
+
   foreach($buttons as $button) {
 ?>
-	         <a href="<?php echo get_permalink($button->ID); ?>" class="hollow button button-large">
-						 <?php echo $button->post_title; ?>
+	         <a href="<?php echo $button->url; ?>" class="hollow button button-large">
+						 <?php echo $button->title; ?>
 					 </a>
  <?php } ?>
 	       </div>
