@@ -25,6 +25,7 @@
 				 <div class="column text-center xsmall-12">
 <?php
   $buttons = wp_get_nav_menu_items("homepage-buttons");
+  print_r($buttons);
   foreach($buttons as $button) {
 ?>
 	         <a href="<?php echo get_permalink($button->ID); ?>" class="hollow button button-large">
