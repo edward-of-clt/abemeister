@@ -3,12 +3,101 @@
 @import 'mixins/responsive';
 @import 'themes/abemeister';
 @import 'nav';
-@import url('https://fonts.googleapis.com/css?family=Lato:300|Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,600,800,900|Permanent+Marker');
 
 body {
     margin: 0px;
     font-family: 'Lato';
     font-size: 1.2em;
+    background: #ddd;
+
+    @media print {
+      header { display: none; }
+    }
+
+    h1 {
+      margin: 0px;
+      color: $primaryColor;
+      font-family: 'Permanent Marker', cursive;
+
+      a {
+        color: $primaryColor;
+        text-decoration: none;
+      }
+    }
+
+    .resume_wrapper {
+      max-width: calc(1000px - 20px);
+      margin: 0px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: rgba(0,0,0,.3) 1px 1px 2px;
+
+      .section.center {
+        text-align: center;
+      }
+
+      .section.right {
+        text-align: right;
+      }
+
+      .section {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: solid #ddd 1px;
+        oveflow: auto;
+        font-size: 16px;
+        font-weight: 300;
+        div.label {
+          float: left;
+          width: 250px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+      }
+
+      .section.withlabel {
+
+        .content {
+          margin-left: 260px;
+          width: calc(100% - 250px);
+        }
+
+      }
+
+      .description {
+        font-style: italic;
+        border-bottom: solid #f3f3f3 1px;
+        padding-bottom: 20px;
+      }
+
+      h1 {
+        // font-family: Georgia, Serif;
+        color: $primaryColor;
+        font-size: 250%;
+        font-weight: 300;
+        // text-align: center;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0px;
+      }
+
+      a {
+        color: $primaryColor;
+        text-decoration: none;
+      }
+
+      i.fa {
+        margin-right: 10px;
+        width: 10px;
+        display: inline-block;
+        color: $primaryColor;
+      }
+    }
 
     .fullWindow {
       height: 100vh;
@@ -19,6 +108,24 @@ body {
       position: relative;
       flex-wrap: wrap;
       flex-direction: column;
+        transition: all .5s ease-in-out;
+
+        h1.title {
+          margin: 0px;
+          font-family: 'Permanent Marker', cursive;
+          color: $primaryColor;
+          display: inline-block;
+          font-size: 300%;
+          padding: 5px 20px;
+          background: rgba($subtleColor,.8);
+        }
+
+        .intro {
+          background: rgba($boldColor,.8);
+          color: $subtleColor;
+          display: inline-block;
+          padding: 10px 14px;
+        }
 
       .marginTop {
         margin-top: 150px;

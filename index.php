@@ -1,6 +1,6 @@
 <?php
 /**
- * Homepage
+ * Template Name: Homepage Landing Page
  *
  */
  ?>
