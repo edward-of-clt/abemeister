@@ -45,7 +45,7 @@
      </div>
 	 </header>
 
-<script src="/wp-content/themes/abeherbert/scripts/vide.js"></script>
+<script src="/wp-content/themes/abemeister/scripts/vide.js"></script>
 <script>
 $(document).ready(function() {
 	$('header.fullWindow').tubular({videoId: 'rQAh3fSDHFs'}); // where idOfYourVideo is the YouTube ID. });
