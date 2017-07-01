@@ -29,11 +29,11 @@ body .resume_wrapper .section div.label { float: left; width: 250px; font-weight
 
 body .resume_wrapper .section.withlabel .content { margin-left: 260px; width: calc(100% - 250px); }
 
-body .resume_wrapper .description { font-style: italic; padding-bottom: 30px; margin-bottom: 5px; }
+body .resume_wrapper .description { font-style: italic; padding-bottom: 30px; }
 
 body .resume_wrapper h1 { color: #393E41; font-size: 250%; font-weight: 300; }
 
-body .resume_wrapper h2 { margin-bottom: 5px; font-size: 18px; font-weight: 400; margin: 0px; }
+body .resume_wrapper h2 { color: #2E282A; font-size: 18px; font-weight: 400; margin: 0px; }
 
 body .resume_wrapper a { color: #393E41; text-decoration: none; }
 
