@@ -108,11 +108,16 @@ body {
         // text-align: center;
       }
 
+      .description {
+        margin-top: 5px;
+      }
+
       h2 {
         color: $secondaryColor;
         font-size: 18px;
         font-weight: 400;
         margin: 0px;
+        margin-bottom: 5px;
       }
 
       a {

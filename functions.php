@@ -10,6 +10,7 @@ $abemeister = new abemeister;
 
  function init() {
      register_nav_menu('homepage-buttons',__( 'Homepage Buttons' ));
+     register_nav_menu('standard-menu',__( 'Standard Menu' ));
      add_shortcode( 'resume', 'resume' );
      add_shortcode( 'section', 'section');
      add_shortcode( 'header', 'header_wrap');

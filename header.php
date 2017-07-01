@@ -18,7 +18,7 @@
 
             $navs = get_nav_menu_locations();
 
-            $buttons = wp_get_nav_menu_items($navs['homepage-buttons']);
+            $buttons = wp_get_nav_menu_items($navs['standard-menu']);
 
             foreach($buttons as $button) {
           ?>
