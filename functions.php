@@ -18,7 +18,7 @@ $abemeister = new abemeister;
  }
 
 function position($atts, $content = null) {
-  return '<div class="position">'.$content.'</div>';
+  return '<span class="position">'.$content.'</span>';
 }
 
 function description($atts, $content = null) {

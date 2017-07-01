@@ -1,4 +1,4 @@
-// compileCompressed, compressedFilenamePattern: ../css/$1.css
+// compile, FilenamePattern: ../css/$1.css
 
 @import 'mixins/responsive';
 @import 'themes/abemeister';
@@ -11,8 +11,31 @@ body {
     font-size: 1.2em;
     background: #ddd;
 
+    br {
+      display: none;
+    }
+
     @media print {
       header { display: none; }
+    }
+
+    header.regularPage {
+      nav {
+        margin-bottom: 10px;
+        a {
+          display: inline-block;
+          color: $primaryColor;
+          padding: 5px;
+          margin: 0px 5px;
+          font-weight: 300;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        a:hover {
+          background: $boldColor;
+          color: $subtleColor;
+        }
+      }
     }
 
     h1 {
@@ -41,9 +64,14 @@ body {
         text-align: right;
       }
 
+      .section:last-child {
+        border: 0px;
+      }
+
       .section {
+        padding: 20px;
+        padding-bottom: 0px;
         margin-bottom: 10px;
-        padding-bottom: 10px;
         border-bottom: solid #ddd 1px;
         oveflow: auto;
         font-size: 16px;
@@ -68,8 +96,7 @@ body {
 
       .description {
         font-style: italic;
-        border-bottom: solid #f3f3f3 1px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
       }
 
       h1 {
