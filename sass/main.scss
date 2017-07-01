@@ -76,6 +76,7 @@ body {
         oveflow: auto;
         font-size: 16px;
         font-weight: 300;
+
         div.label {
           float: left;
           width: 250px;
@@ -97,6 +98,7 @@ body {
       .description {
         font-style: italic;
         padding-bottom: 30px;
+        margin-bottom: 5px;
       }
 
       h1 {
@@ -108,6 +110,7 @@ body {
       }
 
       h2 {
+        margin-bottom: 5px;
         font-size: 18px;
         font-weight: 400;
         margin: 0px;
