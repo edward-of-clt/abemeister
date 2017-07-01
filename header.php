@@ -10,7 +10,7 @@
 <header class="regularPage">
   <div class="row topMenu">
       <div class="column text-center xsmall-12">
-        <h1 class="title"><a href="<?php echo WP_HOME; ?>">Abe Herbert</a></h1>
+        <h1 class="title"><a href="/">Abe Herbert</a></h1>
       </div>
       <div class="column text-center xsmall-12">
         <nav>
