@@ -3,7 +3,34 @@ body { margin: 0px; font-family: 'Lato'; font-size: 1.2em; background: #ddd; }
 
 body br { display: none; }
 
+body .button { background: rgba(255, 255, 250, 0.6); color: #000; padding: 18px 30px; margin: 0px 10px; display: inline-block; font-size: 80%; text-align: center; text-decoration: none; transition: background .4s, color .4s, border .4s; }
+
+body .button.primary { background: #EF5B5B; color: #FFFFFA; }
+
+body .button.primary:hover { background: #a11010; color: #FFFFFA; }
+
+@media (max-width: 767px) { body .button { display: block; margin: 10px !important; }
+				body .badge { display: inline-block; } }
+
+body .button-small { font-size: 80%; padding: 6px; }
+
+body .badge { border-radius: 50%; width: 32px; height: 28px; font-size: 100%; text-align: center; padding: 0px; padding-top: 4px; }
+
+body .button-large { font-size: 120%; }
+
+body .button-block { display: block; }
+
+body .button:hover, body .button.hollow:hover { background: rgba(255, 255, 250, 0.8); color: #000; }
+
+body .button.hollow { background: rgba(0, 0, 0, 0.2); border: #FFFFFA solid 1px; color: #FFFFFA; }
+
 @media print { body header { display: none; } }
+
+body .standard-page form { max-width: 400px; }
+
+body .standard-page form input, body .standard-page form select, body .standard-page form textarea { display: block; width: 100%; background: #fff; border: solid #ccc 1px; }
+
+body .standard-page form input[type="button"], body .standard-page form input[type="submit"], body .standard-page form button { border-radius: 3px; background: #EF5B5B; padding: 10px; min-width: 150px; color: #FFFFFA; }
 
 body header.regularPage nav { margin-bottom: 10px; }
 
@@ -23,7 +50,7 @@ body .resume_wrapper .section.right { text-align: right; }
 
 body .resume_wrapper .section:last-child { border: 0px; }
 
-body .resume_wrapper .section { padding: 20px; padding-bottom: 0px; margin-bottom: 10px; border-bottom: solid #ddd 1px; oveflow: auto; font-size: 16px; font-weight: 300; }
+body .resume_wrapper .section { padding: 20px; padding-bottom: 10px; margin-bottom: 10px; border-bottom: solid #ddd 1px; oveflow: auto; font-size: 16px; font-weight: 300; }
 
 body .resume_wrapper .section div.label { float: left; width: 250px; font-weight: 600; text-transform: uppercase; }
 
@@ -51,23 +78,6 @@ body .fullWindow .marginTop { margin-top: 150px; }
 
 body .fullWindow .lightColor { color: #FFFFFA; }
 
-body .fullWindow .button { background: rgba(255, 255, 250, 0.6); color: #000; padding: 18px 30px; margin: 0px 10px; display: inline-block; font-size: 80%; text-align: center; text-decoration: none; transition: background .4s, border .4s; }
-
-@media (max-width: 767px) { body .fullWindow .button { display: block; margin: 10px !important; }
-				body .fullWindow .badge { display: inline-block; } }
-
-body .fullWindow .button-small { font-size: 80%; padding: 6px; }
-
-body .fullWindow .badge { border-radius: 50%; width: 32px; height: 28px; font-size: 100%; text-align: center; padding: 0px; padding-top: 4px; }
-
-body .fullWindow .button-large { font-size: 120%; }
-
-body .fullWindow .button-block { display: block; }
-
-body .fullWindow .button:hover, body .fullWindow .button.hollow:hover { background: rgba(255, 255, 250, 0.8); color: #000; }
-
-body .fullWindow .button.hollow { background: rgba(0, 0, 0, 0.2); border: #FFFFFA solid 1px; color: #FFFFFA; }
-
 body .fullWindow #video { position: relative; background: transparent; }
 
 body .fullWindow .ytplayer-container { position: absolute; top: 0; z-index: -1; }
@@ -88,7 +98,7 @@ body .row.alignTop { align-items: flex-start; }
 
 body .row.alignBottom { align-items: flex-end; }
 
-body .row { width: 100%; display: flex; overflow: auto; flex-wrap: wrap; align-items: center; }
+body .row { width: 100%; max-width: 1000px; margin: 0px auto; display: flex; overflow: auto; flex-wrap: wrap; align-items: center; }
 
 body .row .column { padding: 10px; height: 100%; }
 
