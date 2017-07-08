@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,600,800,900|Permanent+Marker");
 body { margin: 0px; font-family: 'Lato'; font-size: 1.2em; background: #ddd; }
 
+body label { display: block; font-weight: 400; font-size: 12px; color: #757f85; text-transform: uppercase; margin: 0px; }
+
 body br { display: none; }
 
 body .tabs { border-bottom: solid #ccc 2px; padding: 0px 30px; height: 40px; }
@@ -34,13 +36,17 @@ body .button.hollow { background: rgba(0, 0, 0, 0.2); border: #FFFFFA solid 1px;
 
 @media print { body header { display: none; } }
 
+body .gform_wrapper .top_label .gfield_label { font-weight: 300; font-size: 16px; }
+
 body .standard-page form { max-width: 400px; }
 
-body .standard-page form label { display: block; }
+body .standard-page form label { display: block; color: #393E41; font-weight: 100; }
 
 body .standard-page form input, body .standard-page form select, body .standard-page form textarea { display: block; width: 100%; background: #fff; border: solid #ccc 1px; }
 
-body .standard-page form input[type="button"], body .standard-page form input[type="submit"], body .standard-page form button { border-radius: 3px; background: #EF5B5B; padding: 10px; min-width: 150px; color: #FFFFFA; }
+body .standard-page form input[type="button"], body .standard-page form input[type="submit"], body .standard-page form button { border-radius: 3px; background: #EF5B5B; padding: 10px; min-width: 100px; color: #FFFFFA; font-weight: 200; text-transform: uppercase; font-size: 16px !important; transition: all 1s; }
+
+body .standard-page form input[type="button"]:hover, body .standard-page form input[type="submit"]:hover, body .standard-page form button:hover { background: #ea2d2d; }
 
 body header.regularPage nav { margin-bottom: 10px; }
 
