@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,600,800,900|Permanent+Marker");
-body { margin: 0px; font-family: 'Lato'; font-size: 1.2em; background: #ddd; }
+body { margin: 0px; font-family: 'Lato'; font-size: 1.2em; font-weight: 300; background: #ddd; }
 
 body label { display: block; font-weight: 400; font-size: 12px; color: #757f85; text-transform: uppercase; margin: 0px; }
 
