@@ -11,10 +11,44 @@ body {
     font-size: 1.2em;
     background: #ddd;
 
+
+
     br {
       display: none;
     }
 
+    .tabs {
+      border-bottom: solid #ccc 2px;
+      padding: 0px 30px;
+      height: 40px;
+      a.tab {
+        display: inline-block;
+        padding: 8px;
+        border-radius: 4px 4px 0px 0px;
+        background: linear-gradient(#eee,#ddd);
+        border: solid #ccc 1px;
+        border-bottom: 0px;
+        color: #999;
+        text-decoration: none;
+        margin-right: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        position: relative;
+      }
+
+      a.tab:not(.active):hover {
+        padding: 10px 8px;
+        top: -3px;
+      }
+
+      a.tab.active {
+        color: #333;
+        // background: #ccc;
+        padding: 14px;
+        top: -4px !important;
+      }
+    }
 
           .button {
             background: rgba($subtleColor,.6);
@@ -88,6 +122,9 @@ body {
 
     .standard-page {
       form {
+        label {
+          display: block;
+        }
         max-width: 400px;
         input,select,textarea {
           display: block;
@@ -302,7 +339,7 @@ body {
 
     .row {
       width: 100%;
-      max-width: 1000px;
+      max-width: 1400px;
       margin: 0px auto;
       display: flex;
       overflow: auto;
@@ -315,7 +352,7 @@ body {
       }
 
       @for $i from 12 through 1 {
-        .column.xsmall-#{$i}, .column.small-#{$i}, .column-medium-#{$i}, .column.large-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
+        .column.xsmall-#{$i}, .column.small-#{$i}, .column.medium-#{$i}, .column.large-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
       }
 
 
@@ -328,7 +365,7 @@ body {
 
           @include breakpoint(sm) {
               @for $i from 12 through 1 {
-                .column-medium-#{$i}, .column.large-#{$i} { width: calc(100% - #{$columnPaddingSum}); }
+                .column.medium-#{$i}, .column.large-#{$i} { width: calc(100% - #{$columnPaddingSum}); }
               }
 
             }
@@ -343,5 +380,82 @@ body {
 
     }
 
+    .hosting {
+
+    .progress_bar {
+      width: 100%;
+      height: 24px;
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: rgba(0,0,0,1) 0px 0px 1px;
+      background: linear-gradient(#eee 50%,#ddd 50%,#eee);
+      margin-bottom: 10px;
+
+      .bar {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        animation: animate-stripes 3s linear infinite;
+      }
+
+      .bar.green {
+        background: linear-gradient(rgb(50,200,50) 50%, rgb(20,175,20) 50%, rgb(25,200,25));
+      }
+      .bar.yellow {
+        background: linear-gradient(rgb(255,255,51) 50%, rgb(204,204,0) 50%, rgb(255,255,51));
+      }
+      .bar.red {
+        background: linear-gradient(rgb(200,50,50) 50%, rgb(175,50,50) 50%, rgb(200,25,25));
+      }
+
+
+    }
+
+    .module {
+      border: solid #ccc 1px;
+      border-radius: 4px;
+      background: #fff;
+      overflow: hidden;
+      margin-bottom: 20px;
+
+      .header {
+        padding: 10px;
+        background: #eee;
+        text-transform: uppercase;
+        border-bottom: solid #ddd 1px;
+      }
+
+      .content {
+        padding: 10px;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        a {
+          display: block;
+          height: 90px;
+          width: 16.66%;
+          max-width: 240px;
+          min-width: 120px;
+          font-size: 12px;
+          text-align: center;
+          color: #333;
+          text-decoration: none;
+          img {
+            display: block;
+            margin: 0px auto;
+            height: 50px;
+            width: 50px;
+            margin-bottom: 10px;
+          }
+        }
+
+      }
+
+    }
+
+  }
 
 }
