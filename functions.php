@@ -48,8 +48,9 @@ function header_wrap( $atts, $content = null) {
   return '<h2>'.$content.'</h2>';
 }
 
- /** Step 2 (from text above). */
+
 add_action( 'admin_menu', 'admin_menu' );
+add_theme_support( 'post-thumbnails', array( 'portfolio_items' ) );
 
 function admin_menu() {
   add_menu_page(
@@ -61,4 +62,22 @@ function admin_menu() {
           'dashicons-dashboard',
           6
       );
-  }
+}
+
+function do_on_init() {
+  register_post_type( 'portfolio_items',
+      array(
+        'labels' => array(
+          'name' => __( 'Portfolio Items' ),
+          'singular_name' => __( 'Portfolio Item' )
+        ),
+        'supports'           => array( 'title', 'editor', 'thumbnail' ),
+
+        'public' => true,
+        'has_archive' => true,
+      )
+    );
+
+}
+
+add_action('init','do_on_init');

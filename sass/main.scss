@@ -12,6 +12,63 @@ body {
     font-weight: 300;
     background: #ddd;
 
+    img {
+      max-width: 100%;
+    }
+
+    .portfolio {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      flex-wrap: wrap;
+
+      .item {
+        width: 25vw;
+        height: 30vh;
+        min-height: 400px;
+        max-height: 500px;
+        max-width: 600px;
+        min-width: 400px;
+        position: relative;
+        padding: 20px;
+
+
+          a.info {
+
+            display: block;
+            height: 100%;
+            width: 100%;
+
+            img {
+              max-width: 100%;
+              max-height: 50%;
+            }
+
+            .content {
+              background: rgba(255,255,255,.7);
+              padding: 10px;
+            }
+
+
+              color: #333;
+              text-decoration: none;
+
+            h2 {
+              text-transform: uppercase;
+              font-weight: 800;
+              margin-bottom: 0px;
+              text-decoration: none;
+              color: #333;
+            }
+          }
+
+
+      }
+
+    }
+
     label {
       display: block;
       font-weight: 400;
@@ -374,7 +431,8 @@ body {
       }
 
       @for $i from 12 through 1 {
-        .column.xsmall-#{$i}, .column.small-#{$i}, .column.medium-#{$i}, .column.large-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
+        .column.large-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
+        .column.xsmall-#{$i}, .column.small-#{$i}, .column.medium-#{$i} { width: calc( #{100/12*$i + %} - #{$columnPaddingSum}); }
       }
 
 
