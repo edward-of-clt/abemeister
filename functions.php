@@ -2,6 +2,7 @@
 /**
  * Function definitions for Abemeister
  */
+ exit('test');
 error_reporting(1);
 include('lib/abemeister.php');
 $abemeister = new abemeister;
