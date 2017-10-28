@@ -16,7 +16,10 @@ services:
         - "traefik.frontend.rule=Host:abeherbert.com"
     environment:
       WORDPRESS_DB_PASSWORD: example
-      WORDPRESS_DB_HOST: localhost:3306frds
+      WORDPRESS_DB_HOST: localhost:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_HOST: localhost
+      WORDPRESS_DB_NAME: abeherbert
 
   mysql:
     image: mysql:8.0.3
