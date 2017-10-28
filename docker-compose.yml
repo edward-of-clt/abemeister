@@ -7,8 +7,6 @@ services:
     restart: always
     ports:
       - 85:80
-    links:
-      - mysql:mysql
     deploy:
       labels:
         - "traefik.port=85"
