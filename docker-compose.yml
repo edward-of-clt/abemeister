@@ -20,3 +20,9 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+
+networks:
+  traefik:
+    external:
+  webgateway:
+    external:
